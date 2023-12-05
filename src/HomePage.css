@@ -1,0 +1,311 @@
+.HomePage {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Manrope", sans-serif;
+  background-color: #9d9ea1;
+  overflow: hidden; /* Prevent scrolling beyond the viewport */
+  scroll-behavior: smooth;
+}
+
+/* .HomePage * {
+  border-style: solid;
+  border-color: blue;
+} */
+
+
+.HomePage .actions {
+  margin-left: 20rem;
+  background-color: transparent;
+}
+
+.HomePage header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 0; /* Adjust the z-index based on your layout */
+  background-color: #393e46;
+  width: 100%;
+  height: 18%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  
+}
+
+.HomePage .logout {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  flex-shrink: 0;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 4rem;
+  position: relative;
+  margin-bottom: -140px; 
+}
+
+.HomePage-header .logout-text {
+  text-align: center;
+  
+  font-size: 1rem; 
+  align-self: flex-end; /* Align to the bottom of the header */
+  
+}
+
+.HomePage .logout:hover {
+  opacity: 0.5;
+}
+
+.HomePage .HomePage-logo {
+  width: 8%;
+}
+
+.HomePage main {
+  width: 100%;
+}
+
+.HomePage .content {
+  padding-top: 14rem;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.HomePage .block1 {
+  display: flex;
+  padding-left: 10rem;
+  padding-top: 3rem;
+  height: 35%;
+}
+
+.HomePage .block2 {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5rem;
+}
+
+.HomePage .info h1 {
+  color: #393e46;
+  font-size: 2rem;
+}
+
+.HomePage .info #number.balance-updated {
+  animation: balanceUpdateAnimation 0.5s ease-in-out;
+}
+
+@keyframes balanceUpdateAnimation {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.HomePage .block2 h1 {
+  color: #393e46;
+  font-size: 2rem;
+}
+
+.HomePage .block2 .crypto {
+  padding-left: 1.5rem;
+}
+
+.HomePage .info {
+  width: 25%;
+}
+
+.HomePage .block2 .crypto h1 {
+  font-size: 1.2rem;
+}
+
+.HomePage .info #number {
+  margin-bottom: 0.3rem;
+}
+
+.HomePage .info h2 {
+  color: #393e46;
+  font-size: 1rem;
+  margin: 0;
+  cursor: pointer;
+}
+
+.HomePage .info h2:hover {
+  text-decoration: underline;
+}
+
+.HomePage .cryptos {
+  display: flex;
+}
+
+.HomePage #buySell {
+  margin-top: 0.3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.HomePage #buy {
+  cursor: pointer;
+  background-color: #393e46;
+  border-radius: 5px 0 5px 0;
+  font-family: "Manrope", sans-serif;
+  font-weight: bold;
+  color:#9d9ea1;
+}
+
+.HomePage #buy:hover {
+  background-color: #9d9ea1;
+  color: #393e46;
+}
+
+.HomePage #sell {
+  cursor: pointer;
+  background-color: #393e46;
+  border-radius: 0 5px 0 5px;
+  font-family: "Manrope", sans-serif;
+  font-weight: bold;
+  color:#9d9ea1;
+}
+
+.HomePage #sell:hover {
+  background-color: #9d9ea1;
+  color: #393e46;
+}
+
+.HomePage #cryptoActions {
+  display: flex;
+}
+
+.HomePage header h1 {
+  color: rgb(203, 203, 203);
+  padding-left: 1rem;
+}
+
+.HomePage .dropdown-btn {
+  background-color: transparent;
+  color: white;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: fit-content;
+}
+
+.HomePage .dropdown-btn h1 {
+  color: #393e46;
+  font-size: 1.8rem;
+  padding: 0.2rem 1rem;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #393e46;
+  border-radius: 10px 0 10px 0;
+  margin: 0 auto;
+}
+
+/* Style for the dropdown content */
+.HomePage .dropdown-content {
+  display: none;
+  position: absolute;
+  align-items: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  width: 80%;
+  text-align: center;
+}
+
+/* Style for dropdown links */
+.HomePage .dropdown-content a {
+  background-color: #393e46;
+  color: white;
+  padding: 5px 16px;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 10px 0 10px 0;
+}
+
+/* Change color on hover */
+.HomePage .dropdown-content a:hover {
+  background-color: #ddd;
+  color: #393e46;
+}
+
+/* Show the dropdown content when hovering over the button */
+.HomePage .dropdown-btn:hover .dropdown-content {
+  display: block;
+}
+
+.HomePage .actionInfo .withdraw,
+.HomePage .actionInfo .deposit,
+.HomePage .actionInfo .transfer {
+  display: none;
+}
+
+.HomePage .actionInfo .visible {
+  display: block;
+  font-size: 1rem;
+  color: #393e46;
+  padding-left: 2rem;
+}
+
+.HomePage #filled-adornment-amount {
+  color: #393e46;
+  font-size: 1.5rem;
+  padding: 0;
+  padding-top: 1.3rem;
+  padding-bottom: 0.2rem;
+  width: 85%;
+}
+
+.HomePage #inner {
+  display: flex;
+
+  align-items: center;
+}
+
+.HomePage #button {
+  height: fit-content;
+  padding: 1rem;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+  color: #393e46;
+  border-color: #393e46;
+  background-color: #393e462f;
+}
+
+.HomePage #transferInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.HomePage #price {
+  display: flex;
+}
+
+.HomePage h2 {
+  font-size: 0.9rem;
+  color: #393e46;
+}
+
+.HomePage #arrowup {
+  color: green;
+  margin-top: 0.8rem;
+  margin-left: 0.4rem;
+}
+
+.HomePage #arrowdown {
+  color: rgb(180, 0, 0);
+  margin-top: 0.8rem;
+  margin-left: 0.4rem;
+}
